@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 export default function About() {
   return (
     <main className="max-w-7xl mx-auto px-8 py-16 md:py-24">
+      <SEO 
+        title="About Us | FinTools India: Mission & Privacy-First Policy"
+        description="About FinTools India: Our commitment to providing 100% accurate and private financial tools for the modern Indian citizen."
+      />
       {/* Hero Section */}
       <section className="mb-24">
         <div className="max-w-3xl">

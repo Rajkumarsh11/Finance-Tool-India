@@ -1,5 +1,7 @@
 import React, { useState, useMemo } from "react";
 import ToolSidebar from "../components/ToolSidebar";
+import SEO from "../components/SEO";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 export default function HealthInsurance() {
   const [age, setAge] = useState(35);
@@ -39,8 +41,44 @@ export default function HealthInsurance() {
 
   return (
     <div className="flex flex-1 max-w-7xl mx-auto w-full relative">
+      <SEO 
+        title="Health Insurance Premium Calculator 2026: Plan Your Coverage"
+        description="Estimate your health insurance premium based on age and coverage. Plan your family's protection with our accurate Indian insurance planning tool."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How much health insurance coverage do I need?",
+              "answer": {
+                "@type": "Answer",
+                "text": "For a family in a metro city, we recommend a minimum coverage of ₹10 Lakhs. If you have parents, consider ₹15-20 Lakhs due to rising medical inflation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do health insurance premiums increase with age?",
+              "answer": {
+                "@type": "Answer",
+                "text": "Yes, health insurance premiums are highly sensitive to age as the risk of medical issues increases. Premiums typically jump when you enter a new age bracket (e.g., 36, 41, 46)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is a 'Floater' plan?",
+              "answer": {
+                "@type": "Answer",
+                "text": "A Family Floater plan covers the entire family under a single sum insured. Any member can use the total limit during the policy year."
+              }
+            }
+          ]
+        }}
+      />
       <ToolSidebar />
-      <div className="flex-1 px-4 md:px-8 lg:px-12 py-8 md:py-12 overflow-hidden w-full">
+      <div className="flex-1 overflow-hidden w-full">
+        <Breadcrumbs pageName="Health Insurance" />
+        <div className="px-4 md:px-8 lg:px-12 py-8 md:py-12">
       {/* Hero Section */}
       <section className="mb-16 text-center md:text-left">
         <span className="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label text-xs font-bold tracking-widest uppercase mb-4">
@@ -224,7 +262,23 @@ export default function HealthInsurance() {
           </div>
         </section>
       </div>
+
+      {/* FAQ Section */}
+      <section className="mt-24 max-w-4xl mx-auto mb-12">
+        <h2 className="text-3xl font-extrabold text-primary mb-10 text-center">Health Insurance Frequently Asked Questions</h2>
+        <div className="space-y-6">
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">What is 'Waiting Period' in health insurance?</h3>
+            <p className="text-on-surface-variant leading-relaxed">It's the time you must wait before you can claim for pre-existing diseases. Usually, it's 2-4 years, though some plans offer waivers for an extra premium.</p>
+          </div>
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">Is dental treatment covered?</h3>
+            <p className="text-on-surface-variant leading-relaxed">Standard health insurance in India usually doesn't cover dental treatment unless it's due to an accident. Some premium plans or add-ons might include OPD dental cover.</p>
+          </div>
+        </div>
+      </section>
       </div>
+    </div>
     </div>
   );
 }

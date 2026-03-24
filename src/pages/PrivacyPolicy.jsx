@@ -1,8 +1,13 @@
 import React from "react";
+import SEO from "../components/SEO";
 
 export default function PrivacyPolicy() {
   return (
     <main className="flex-grow max-w-5xl mx-auto px-6 py-12 md:py-20">
+      <SEO 
+        title="Privacy Policy | FinTools India: Zero-Storage Guarantee"
+        description="Read our privacy policy. Your data never leaves your browser. 100% privacy and security for all your financial calculations."
+      />
       {/* Hero Header */}
       <header className="mb-16">
         <span className="font-label text-xs uppercase tracking-[0.2em] text-primary font-bold mb-4 block">Compliance &amp; Integrity</span>

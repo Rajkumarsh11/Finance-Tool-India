@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 export default function Calculators() {
   const categories = [
@@ -47,6 +48,10 @@ export default function Calculators() {
 
   return (
     <main className="px-4 md:px-8 lg:px-12 py-12 max-w-7xl mx-auto">
+      <SEO 
+        title="All Financial Tools India: Free Calculators & Planning"
+        description="Access our full suite of free financial tools. Calculate SIP, GST, EMI, and Income Tax with precision. All-in-one financial planning for Indian citizens."
+      />
       <div className="text-center mb-16 max-w-3xl mx-auto">
         <span className="label-md uppercase tracking-[0.2em] text-primary font-bold text-xs mb-3 block">Complete Suite</span>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold font-headline text-on-surface tracking-tight leading-tight mb-6">

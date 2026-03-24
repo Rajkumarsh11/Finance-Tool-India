@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 export default function Contact() {
   return (
     <main className="min-h-screen">
+      <SEO 
+        title="Contact Us | FinTools India: Help & Feedback"
+        description="Get in touch with FinTools India for support, feedback, or tool requests. We're dedicated to improving financial literacy in India."
+      />
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden bg-surface">
         <div className="absolute inset-0 opacity-10 pointer-events-none">

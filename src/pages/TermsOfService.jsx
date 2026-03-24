@@ -1,8 +1,13 @@
 import React from "react";
+import SEO from "../components/SEO";
 
 export default function TermsOfService() {
   return (
     <main className="min-h-screen">
+      <SEO 
+        title="Terms of Service | FinTools India Guidelines"
+        description="Terms and conditions for using FinTools India. Guidelines for our free financial calculators and services."
+      />
       {/* Hero Header */}
       <header className="bg-surface-container-low pt-20 pb-12">
         <div className="max-w-4xl mx-auto px-6">

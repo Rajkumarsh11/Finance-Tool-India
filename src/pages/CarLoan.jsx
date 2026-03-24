@@ -1,6 +1,8 @@
 import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import ToolSidebar from "../components/ToolSidebar";
+import SEO from "../components/SEO";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 export default function CarLoan() {
   const [amount, setAmount] = useState(850000);
@@ -58,10 +60,46 @@ export default function CarLoan() {
 
   return (
     <>
+      <SEO 
+        title="Car Loan EMI Calculator 2026: Plan Your Dream Car Purchase"
+        description="Calculate your monthly car loan EMI with interest breakdown. Compare bank rates and check total interest payable for new & used car loans in India."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How is car loan EMI calculated?",
+              "answer": {
+                "@type": "Answer",
+                "text": "Car loan EMI is calculated using the formula: [P x R x (1+R)^N]/[(1+R)^N-1], where P is Principal, R is monthly interest rate, and N is tenure in months."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are the current car loan interest rates in India?",
+              "answer": {
+                "@type": "Answer",
+                "text": "As of early 2026, car loan interest rates typically range from 8.5% to 12%, depending on the bank and your credit score."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I prepay my car loan?",
+              "answer": {
+                "@type": "Answer",
+                "text": "Yes, most banks allow prepayment of car loans, though some may charge a small penalty if paid before a certain period (e.g., 6-12 months)."
+              }
+            }
+          ]
+        }}
+      />
       <div className="flex flex-1 max-w-7xl mx-auto w-full relative">
         <ToolSidebar />
 
-        <main className="flex-1 p-4 md:p-6 lg:p-10">
+        <main className="flex-1 font-sans">
+          <Breadcrumbs pageName="Car Loan Calculator" />
+          <div className="p-4 md:p-6 lg:p-10">
           <section className="mb-12">
             <span className="label-md uppercase tracking-[0.2em] text-primary font-bold text-xs mb-2 block">Financing Your Dream Drive</span>
             <h1 className="text-4xl md:text-5xl font-extrabold font-headline text-on-surface tracking-tight leading-tight mb-4">Car Loan EMI Calculator</h1>
@@ -213,6 +251,22 @@ export default function CarLoan() {
               </table>
             </div>
           </section>
+
+          {/* FAQ Section */}
+          <section className="mt-24 max-w-4xl mx-auto mb-12">
+            <h2 className="text-3xl font-extrabold text-primary mb-10 text-center">Car Loan Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+                <h3 className="font-bold text-lg text-primary mb-2">New vs Used Car Loan: Which is better?</h3>
+                <p className="text-on-surface-variant leading-relaxed">New car loans usually have lower interest rates and longer tenures. Used car loans are easier for smaller budgets but often carry higher interest rates (usually 2-4% higher).</p>
+              </div>
+              <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+                <h3 className="font-bold text-lg text-primary mb-2">How much downpayment should I make?</h3>
+                <p className="text-on-surface-variant leading-relaxed">We recommend making at least 20% downpayment. This reduces your EMI and helps you avoid 'upside-down' loans where you owe more than the car's resale value.</p>
+              </div>
+            </div>
+          </section>
+          </div>
         </main>
       </div>
       <button className="fixed bottom-8 right-8 bg-secondary text-on-secondary p-4 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform lg:hidden">

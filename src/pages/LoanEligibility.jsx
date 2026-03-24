@@ -1,6 +1,8 @@
 import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import ToolSidebar from "../components/ToolSidebar";
+import SEO from "../components/SEO";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 export default function LoanEligibility() {
   const [monthlyIncome, setMonthlyIncome] = useState(120000);
@@ -34,8 +36,44 @@ export default function LoanEligibility() {
 
   return (
     <div className="flex flex-1 max-w-7xl mx-auto w-full relative">
+      <SEO 
+        title="Loan Eligibility Calculator: Check Your Borrowing Limit In India"
+        description="Check your car or home loan eligibility instantly. Understand debt-to-income ratio and bank criteria for Indian loans. Professional planning tool."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How is loan eligibility calculated?",
+              "answer": {
+                "@type": "Answer",
+                "text": "Loan eligibility is primarily calculated using your monthly income and current EMIs. Banks usually cap your total EMI (existing + new) at 50-60% of your net monthly income."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is FOIR in loan eligibility?",
+              "answer": {
+                "@type": "Answer",
+                "text": "FOIR stands for Fixed Obligation to Income Ratio. it is a parameter used by banks to determine if a borrower can afford a new loan after paying existing debts."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I increase my loan eligibility?",
+              "answer": {
+                "@type": "Answer",
+                "text": "Yes, you can increase eligibility by adding a co-applicant (spouse/parent), clearing existing small debts, or opting for a longer tenure."
+              }
+            }
+          ]
+        }}
+      />
       <ToolSidebar />
-      <div className="flex-1 px-6 md:px-12 py-12 bg-surface min-h-screen w-full">
+      <div className="flex-1 min-h-screen w-full">
+        <Breadcrumbs pageName="Loan Eligibility" />
+        <div className="px-6 md:px-12 py-12 bg-surface">
       {/* Hero Section */}
       <section className="mb-12">
         <h1 className="text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight mb-4">
@@ -252,7 +290,23 @@ export default function LoanEligibility() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <section className="mt-24 max-w-4xl mx-auto mb-12">
+        <h2 className="text-3xl font-extrabold text-primary mb-10 text-center">Loan Eligibility Frequently Asked Questions</h2>
+        <div className="space-y-6">
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">How much home loan can I get on a ₹50,000 salary?</h3>
+            <p className="text-on-surface-variant leading-relaxed">Assuming no other EMIs and a 20-year tenure at 8.5% interest, you might be eligible for a loan of approximately ₹25-30 Lakhs.</p>
+          </div>
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">Does a credit score affect loan amount?</h3>
+            <p className="text-on-surface-variant leading-relaxed">Directly, no, but a high credit score (750+) helps you secure lower interest rates, which indirectly increases the maximum loan amount you can afford.</p>
+          </div>
+        </div>
+      </section>
       </div>
+    </div>
     </div>
   );
 }

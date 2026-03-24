@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 export default function HelpCenter() {
   return (
     <main className="min-h-screen">
+      <SEO 
+        title="Help Center & FAQs | FinTools India Support"
+        description="Find answers to frequently asked questions about our calculators and methodology. Support for all your financial planning needs."
+      />
       {/* Hero Section */}
       <section className="bg-primary text-on-primary py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">

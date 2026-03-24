@@ -1,6 +1,8 @@
 import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import ToolSidebar from "../components/ToolSidebar";
+import SEO from "../components/SEO";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 export default function HomeLoan() {
   const [amount, setAmount] = useState(5000000);
@@ -57,10 +59,46 @@ export default function HomeLoan() {
 
   return (
     <>
+      <SEO 
+        title="Home Loan EMI Calculator India: Detailed Interest Breakdown"
+        description="Plan your home loan with our easy EMI calculator. See total interest, principal amount, and amortization schedule for Indian banks."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How much home loan can I get?",
+              "answer": {
+                "@type": "Answer",
+                "text": "Typically, banks lend up to 80-90% of the property value, provided your total EMIs don't exceed 50-60% of your monthly take-home income."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the maximum tenure for a home loan?",
+              "answer": {
+                "@type": "Answer",
+                "text": "Most Indian banks offer home loans for a maximum tenure of 30 years, depending on the borrower's age at maturity."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does home loan save tax?",
+              "answer": {
+                "@type": "Answer",
+                "text": "Yes, you can claim deductions on principal under Section 80C and interest under Section 24(b) of the Income Tax Act."
+              }
+            }
+          ]
+        }}
+      />
       <div className="flex flex-1 max-w-7xl mx-auto w-full relative">
         <ToolSidebar />
 
-        <main className="flex-1 p-4 md:p-6 lg:p-10">
+        <main className="flex-1">
+          <Breadcrumbs pageName="Home Loan Calculator" />
+          <div className="p-4 md:p-6 lg:p-10">
           <section className="mb-12">
             <span className="label-md uppercase tracking-[0.2em] text-primary font-bold text-xs mb-2 block">Financing Your Dream Home</span>
             <h1 className="text-4xl md:text-5xl font-extrabold font-headline text-on-surface tracking-tight leading-tight mb-4">Home Loan EMI Calculator</h1>
@@ -194,6 +232,22 @@ export default function HomeLoan() {
               </table>
             </div>
           </section>
+
+          {/* FAQ Section */}
+          <section className="mt-24 max-w-4xl mx-auto mb-12">
+            <h2 className="text-3xl font-extrabold text-primary mb-10 text-center">Home Loan Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+                <h3 className="font-bold text-lg text-primary mb-2">What is a good credit score for a home loan?</h3>
+                <p className="text-on-surface-variant leading-relaxed">A credit score of 750 or above is considered ideal for a home loan and can help you secure the lowest possible interest rates.</p>
+              </div>
+              <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+                <h3 className="font-bold text-lg text-primary mb-2">Fixed vs Floating interest rate: Which is better?</h3>
+                <p className="text-on-surface-variant leading-relaxed">Floating rates are usually lower and benefit from RBI rate cuts. Fixed rates provide certainty but are higher. In the current Indian market, floating rates are more popular.</p>
+              </div>
+            </div>
+          </section>
+          </div>
         </main>
       </div>
       <button className="fixed bottom-8 right-8 bg-secondary text-on-secondary p-4 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform lg:hidden">

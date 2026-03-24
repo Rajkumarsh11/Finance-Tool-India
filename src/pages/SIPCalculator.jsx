@@ -1,6 +1,8 @@
 import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import ToolSidebar from "../components/ToolSidebar";
+import SEO from "../components/SEO";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 export default function SIPCalculator() {
   const [amount, setAmount] = useState(25000);
@@ -43,10 +45,46 @@ export default function SIPCalculator() {
 
   return (
     <>
+      <SEO 
+        title="SIP Calculator 2026: Calculate Mutual Fund Returns Online"
+        description="Estimate your future wealth with our SIP calculator. Best for Indian mutual fund investors to calculate wealth gain and expected returns in Lakhs/Crores."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How is SIP return calculated?",
+              "answer": {
+                "@type": "Answer",
+                "text": "SIP returns are calculated using the FV (Future Value) formula, which considers the periodic investment, rate of return, and time period, compounded monthly."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the average return on SIP in India?",
+              "answer": {
+                "@type": "Answer",
+                "text": "Historical data shows that equity mutual funds in India typically deliver annual returns between 12% to 15% over a long tenure (10+ years)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I stop my SIP anytime?",
+              "answer": {
+                "@type": "Answer",
+                "text": "Yes, mutual fund SIPs are highly flexible. You can stop, pause, or change the investment amount at any time without any penalty from the fund house."
+              }
+            }
+          ]
+        }}
+      />
       <div className="flex flex-1 max-w-7xl mx-auto w-full relative">
         <ToolSidebar />
 
-        <main className="flex-1 p-4 md:p-6 lg:p-10">
+        <main className="flex-1">
+          <Breadcrumbs pageName="SIP Calculator" />
+          <div className="p-4 md:p-6 lg:p-10">
           <section className="mb-12">
             <span className="font-label text-xs tracking-[0.2em] text-primary uppercase font-semibold">Financial Planning Tools</span>
             <h1 className="font-headline text-4xl md:text-5xl font-extrabold text-on-surface mt-4 tracking-tight leading-tight">SIP Returns Calculator</h1>
@@ -217,7 +255,28 @@ export default function SIPCalculator() {
               </ol>
             </article>
           </div>
-        </main>
+
+          {/* FAQ Section */}
+          <section className="mt-24 max-w-4xl mx-auto mb-12">
+            <h2 className="text-3xl font-extrabold text-primary mb-10 text-center">SIP Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20">
+                <h3 className="font-bold text-lg text-primary mb-2">What is the best time to start an SIP?</h3>
+                <p className="text-on-surface-variant leading-relaxed italic border-l-4 border-secondary/30 pl-4">"The best time to start was yesterday, the second best time is today."</p>
+                <p className="text-on-surface-variant leading-relaxed mt-2 uppercase tracking-[0.05em] text-xs font-semibold">Since SIP uses rupee cost averaging, you don't need to time the market.</p>
+              </div>
+              <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20">
+                <h3 className="font-bold text-lg text-primary mb-2">Is SIP better than Lumpsum?</h3>
+                <p className="text-on-surface-variant leading-relaxed">SIP is generally better for salaried individuals as it averages out the cost of purchase during market volatility, whereas lumpsum is ideal if you have a large corpus and the market is undervalued.</p>
+              </div>
+              <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20">
+                <h3 className="font-bold text-lg text-primary mb-2">How much should I invest in SIP?</h3>
+                <p className="text-on-surface-variant leading-relaxed">A common rule of thumb is to save at least 20% of your take-home pay, with a significant portion going into SIPs aligned with your long-term goals.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
       </div>
       <button className="fixed bottom-8 right-8 bg-gradient-to-br from-primary to-primary-container text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform lg:hidden z-40">
         <span className="material-symbols-outlined">add_chart</span>

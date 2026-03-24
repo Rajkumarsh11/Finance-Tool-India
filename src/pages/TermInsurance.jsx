@@ -1,5 +1,7 @@
 import React, { useState, useMemo } from "react";
 import ToolSidebar from "../components/ToolSidebar";
+import SEO from "../components/SEO";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 export default function TermInsurance() {
   const [income, setIncome] = useState(1200000);
@@ -40,13 +42,49 @@ export default function TermInsurance() {
 
   return (
     <div className="flex flex-1 max-w-7xl mx-auto w-full relative">
+      <SEO 
+        title="Term Life Insurance Calculator: Secure Your Family's Future"
+        description="Calculate the term insurance coverage you need to safeguard your family. Professional planning tools based on current Indian inflation rates."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the 15x rule in term insurance?",
+              "answer": {
+                "@type": "Answer",
+                "text": "The 15x rule suggests that your term insurance cover (sum assured) should be at least 15 times your annual income to provide adequate support for your family."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is term insurance maturity amount taxable?",
+              "answer": {
+                "@type": "Answer",
+                "text": "Term insurance usually has no maturity benefit. However, the death benefit (claim amount) received by the nominees is 100% tax-free under Section 10(10D)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Till what age should I buy term insurance?",
+              "answer": {
+                "@type": "Answer",
+                "text": "It is generally recommended to have cover until your expected retirement age (usually 60 or 65), by which time your dependents will likely be self-sufficient and your liabilities cleared."
+              }
+            }
+          ]
+        }}
+      />
       <ToolSidebar />
-      <div className="flex-1 p-4 md:p-8 lg:p-12 bg-surface overflow-hidden w-full">
+      <div className="flex-1 bg-surface overflow-hidden w-full">
+        <Breadcrumbs pageName="Term Insurance" />
+        <div className="p-4 md:p-8 lg:p-12">
       {/* Hero Section */}
       <section className="mb-12">
         <span className="text-secondary font-semibold uppercase tracking-[0.2em] text-xs font-label">Financial Protection</span>
         <h1 className="text-4xl md:text-5xl font-extrabold text-on-background font-headline tracking-tight mt-2 mb-4 leading-tight">
-          Term Life Insurance <br /><span className="text-primary-container">Architect Calculator</span>
+          Term Life Insurance <br /><span className="text-primary-container">Calculator</span>
         </h1>
         <p className="text-on-surface-variant max-w-2xl text-lg font-body leading-relaxed">
           Ensure your legacy with precision. Calculate the exact sum assured required to protect your family's future and settle liabilities.
@@ -190,7 +228,23 @@ export default function TermInsurance() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <section className="mt-24 max-w-4xl mx-auto mb-12">
+        <h2 className="text-3xl font-extrabold text-primary mb-10 text-center">Term Insurance Frequently Asked Questions</h2>
+        <div className="space-y-6">
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">Can smokers buy term insurance?</h3>
+            <p className="text-on-surface-variant leading-relaxed">Yes, smokers can buy term insurance, but the premiums are typically 30-70% higher than for non-smokers due to increased health risks.</p>
+          </div>
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">What is 'Claim Settlement Ratio' (CSR)?</h3>
+            <p className="text-on-surface-variant leading-relaxed">CSR is the percentage of claims an insurer pays out of the total claims received. We recommend choosing a company with a CSR higher than 98%.</p>
+          </div>
+        </div>
+      </section>
       </div>
+    </div>
     </div>
   );
 }

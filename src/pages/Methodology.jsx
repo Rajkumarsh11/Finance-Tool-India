@@ -1,8 +1,13 @@
 import React from "react";
+import SEO from "../components/SEO";
 
 export default function Methodology() {
   return (
     <main className="max-w-7xl mx-auto px-6 py-16">
+      <SEO 
+        title="Our Calculation Methodology | FinTools India Precision"
+        description="Learn the math and regulations behind our financial tools. Transparent and accurate calculations updated for 2026-27."
+      />
       {/* Hero Section */}
       <section className="mb-24 flex flex-col md:flex-row items-center gap-12">
         <div className="md:w-3/5">

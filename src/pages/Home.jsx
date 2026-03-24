@@ -1,9 +1,44 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 export default function Home() {
   return (
     <main>
+      <SEO 
+        title="FinTools India: Free Financial Calculators & Planning Tools"
+        description="India's best free financial tools. Calculate SIP, GST, EMI, and Income Tax with 100% accuracy. Plan your financial future with FinTools India."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Are FinTools India calculators accurate?",
+              "answer": {
+                "@type": "Answer",
+                "text": "Yes, our calculators are built using standardized Indian financial regulations (RBI, Income Tax Dept) and are updated for the 2026-27 fiscal year to ensure 100% accuracy."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is my data safe on FinTools India?",
+              "answer": {
+                "@type": "Answer",
+                "text": "Absolutely. We use a 'Zero-Storage' architecture, meaning all calculations happen locally in your browser. No personal financial data is ever sent to or stored on our servers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is it free to use FinTools India?",
+              "answer": {
+                "@type": "Answer",
+                "text": "Yes, all our financial tools and calculators are 100% free to use for all users, with no hidden costs or subscriptions."
+              }
+            }
+          ]
+        }}
+      />
       {/* Hero Section */}
       <section className="relative px-4 md:px-8 lg:px-12 py-16 lg:py-24 overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16 relative z-10">
@@ -243,6 +278,26 @@ export default function Home() {
           {/* Decorative background elements */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/20 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
+        </div>
+      </section>
+      {/* FAQ Section */}
+      <section className="px-4 md:px-8 lg:px-12 py-16 bg-surface">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-extrabold text-primary mb-12 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+              <h3 className="font-bold text-lg text-primary mb-2">Are FinTools India calculators updated for 2026?</h3>
+              <p className="text-on-surface-variant leading-relaxed">Yes, all our tools, including the Income Tax and GST calculators, are fully updated with the latest 2026-27 regulations and tax slabs.</p>
+            </div>
+            <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+              <h3 className="font-bold text-lg text-primary mb-2">Do I need to sign up to use the tools?</h3>
+              <p className="text-on-surface-variant leading-relaxed">No sign-up is required. You can access all our financial tools instantly and anonymously without providing any personal information.</p>
+            </div>
+            <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+              <h3 className="font-bold text-lg text-primary mb-2">Can I use these tools on my phone?</h3>
+              <p className="text-on-surface-variant leading-relaxed">Yes, FinTools India is designed with a mobile-first approach, ensuring a seamless experience across smartphones, tablets, and desktops.</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

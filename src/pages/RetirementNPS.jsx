@@ -1,6 +1,8 @@
 import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import ToolSidebar from "../components/ToolSidebar";
+import SEO from "../components/SEO";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 export default function RetirementNPS() {
   const [monthlyContribution, setMonthlyContribution] = useState(15000);
@@ -32,14 +34,50 @@ export default function RetirementNPS() {
 
   return (
     <div className="flex flex-1 max-w-7xl mx-auto w-full relative">
+      <SEO 
+        title="NPS Calculator: Plan Your Retirement & Monthly Pension"
+        description="Calculate your National Pension System (NPS) corpus and monthly pension amount. Plan a secure retirement with this easy Indian tax-saving tool."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the benefit of NPS?",
+              "answer": {
+                "@type": "Answer",
+                "text": "NPS offers low-cost professional management, choice of asset allocation (Equity/Debt), and extra tax benefit of ₹50,000 under Section 80CCD(1B)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is NPS maturity fully tax-free?",
+              "answer": {
+                "@type": "Answer",
+                "text": "60% of the NPS corpus withdrawn at maturity is tax-free. The remaining 40% must be used to buy an annuity, which is taxable as per your income slab."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much pension will I get from NPS?",
+              "answer": {
+                "@type": "Answer",
+                "text": "Your pension depends on your total accumulated corpus and the annuity rate at retirement. Typically, 40% of the corpus must be used to provide a monthly pension."
+              }
+            }
+          ]
+        }}
+      />
       <ToolSidebar />
-      <div className="flex-1 p-6 md:p-12 overflow-y-auto bg-surface min-h-screen w-full">
+      <div className="flex-1 overflow-y-auto bg-surface min-h-screen w-full">
+        <Breadcrumbs pageName="NPS Calculator" />
+        <div className="p-6 md:p-12">
       {/* Hero Section */}
       <section className="mb-12">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-3/5">
             <span className="font-label uppercase tracking-[0.2em] font-semibold text-primary mb-4 block">National Pension System</span>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-on-surface mb-6 leading-tight tracking-tight">Architecting Your <br/><span className="text-secondary italic">Golden Years</span>.</h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-on-surface mb-6 leading-tight tracking-tight">NPS Retirement <br/><span className="text-secondary italic">Pension Calculator</span>.</h1>
             <p className="text-on-surface-variant text-lg max-w-lg mb-8">Precision engineering for your retirement. Calculate your NPS corpus, estimated pension, and tax benefits under Section 80CCD with our architectural precision tools.</p>
           </div>
           <div className="md:w-2/5 w-full">
@@ -177,7 +215,23 @@ export default function RetirementNPS() {
         </div>
         <button onClick={() => window.location.href='/contact'} className="z-10 px-10 py-4 bg-primary text-white font-bold rounded-xl shadow-xl hover:translate-y-[-2px] transition-all">Consult an Architect</button>
       </section>
+
+      {/* FAQ Section */}
+      <section className="mt-24 max-w-4xl mx-auto mb-12">
+        <h2 className="text-3xl font-extrabold text-primary mb-10 text-center">NPS Frequently Asked Questions</h2>
+        <div className="space-y-6">
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">Can I withdraw NPS before 60?</h3>
+            <p className="text-on-surface-variant leading-relaxed">Partial withdrawals are allowed for specific reasons (education, marriage, house purchase, illness) after 3 years, up to 25% of your own contributions.</p>
+          </div>
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">Which is better: Auto Choice or Active Choice?</h3>
+            <p className="text-on-surface-variant leading-relaxed">Active choice gives you control over equity exposure (up to 75%), while Auto choice automatically reduces equity as you age. Active choice is better for financially savvy investors.</p>
+          </div>
+        </div>
+      </section>
       </div>
+    </div>
     </div>
   );
 }

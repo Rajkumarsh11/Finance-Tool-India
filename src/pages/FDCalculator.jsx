@@ -1,5 +1,7 @@
 import React, { useState, useMemo } from "react";
 import ToolSidebar from "../components/ToolSidebar";
+import SEO from "../components/SEO";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 export default function FDCalculator() {
   const [principal, setPrincipal] = useState(500000);
@@ -43,8 +45,43 @@ export default function FDCalculator() {
 
   return (
     <div className="flex flex-1 max-w-7xl mx-auto w-full relative">
+      <SEO 
+        title="FD Calculator 2026: Calculate Fixed Deposit Interest & Maturity"
+        description="Estimate returns on your bank FD. Check maturity amount for monthly, quarterly, or yearly compounding as per latest Indian bank rates."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How is FD maturity calculated?",
+              "answer": {
+                "@type": "Answer",
+                "text": "FD maturity is calculated using the compound interest formula: A = P(1 + r/n)^(nt), where P is principal, r is rate, n is compounding frequency, and t is time."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which compounding frequency is best for FD?",
+              "answer": {
+                "@type": "Answer",
+                "text": "Monthly or quarterly compounding results in slightly higher maturity values compared to half-yearly or yearly compounding due to more frequent interest accumulation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is FD interest taxable?",
+              "answer": {
+                "@type": "Answer",
+                "text": "Yes, FD interest is added to your total income and taxed as per your slab. TDS is deducted if interest exceeds ₹40,000 (₹50,000 for seniors)."
+              }
+            }
+          ]
+        }}
+      />
       <ToolSidebar />
       <main className="flex-1 w-full max-w-full overflow-hidden">
+        <Breadcrumbs pageName="FD Calculator" />
         <div className="max-w-5xl mx-auto px-4 md:px-8 py-8 md:py-12">
       {/* Hero Section */}
       <div className="mb-12">
@@ -205,6 +242,21 @@ export default function FDCalculator() {
           </p>
         </div>
       </div>
+
+      {/* FAQ Section */}
+      <section className="mt-24 max-w-4xl mx-auto mb-12">
+        <h2 className="text-3xl font-extrabold text-primary mb-10 text-center">FD Frequently Asked Questions</h2>
+        <div className="space-y-6">
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">Can I withdraw FD before maturity?</h3>
+            <p className="text-on-surface-variant leading-relaxed">Yes, most banks allow premature withdrawal, but they usually charge a penalty (typically 0.5% to 1%) and pay a lower interest rate than the original agreement.</p>
+          </div>
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">What is a 5-year Tax Saving FD?</h3>
+            <p className="text-on-surface-variant leading-relaxed">It's a special FD with a mandatory 5-year lock-in that qualifies for deduction under Section 80C. However, the interest earned is still taxable.</p>
+          </div>
+        </div>
+      </section>
     </div>
       </main>
     </div>

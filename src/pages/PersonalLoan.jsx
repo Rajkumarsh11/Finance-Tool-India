@@ -1,5 +1,7 @@
 import React, { useState, useMemo } from "react";
 import ToolSidebar from "../components/ToolSidebar";
+import SEO from "../components/SEO";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 export default function PersonalLoan() {
   const [loanAmount, setLoanAmount] = useState(500000);
@@ -80,8 +82,44 @@ export default function PersonalLoan() {
 
   return (
     <div className="flex flex-1 max-w-7xl mx-auto w-full relative">
+      <SEO 
+        title="Personal Loan EMI Calculator: Instant EMI & Interest Check"
+        description="Calculate personal loan EMIs for any bank in India. Understand total repayment amount and plan your monthly budget easily."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the formula for Personal Loan EMI?",
+              "answer": {
+                "@type": "Answer",
+                "text": "The formula is: [P x R x (1+R)^N]/[(1+R)^N-1]. P is for principal, R is for monthly interest rate, and N is for tenure in months."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the minimum salary for a personal loan?",
+              "answer": {
+                "@type": "Answer",
+                "text": "Most banks in India require a minimum monthly net income of ₹15,000 to ₹25,000, depending on the city and the lender."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does personal loan approval take?",
+              "answer": {
+                "@type": "Answer",
+                "text": "Instant personal loans can be approved in minutes, while traditional bank processes may take 2-5 working days for documentation and verification."
+              }
+            }
+          ]
+        }}
+      />
       <ToolSidebar />
-      <div className="flex-1 p-4 md:p-8 lg:p-12 overflow-hidden w-full">
+      <div className="flex-1 overflow-hidden w-full">
+        <Breadcrumbs pageName="Personal Loan Calculator" />
+        <div className="p-4 md:p-8 lg:p-12">
       {/* Hero Header */}
       <header className="mb-12">
         <span className="text-secondary font-label text-xs font-bold uppercase tracking-[0.2em] mb-3 block">Calculator</span>
@@ -269,7 +307,23 @@ export default function PersonalLoan() {
             </div>
           </section>
       )}
+
+      {/* FAQ Section */}
+      <section className="mt-24 max-w-4xl mx-auto mb-12">
+        <h2 className="text-3xl font-extrabold text-primary mb-10 text-center">Personal Loan Frequently Asked Questions</h2>
+        <div className="space-y-6">
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">Can I get a personal loan with a low credit score?</h3>
+            <p className="text-on-surface-variant leading-relaxed">It's possible, but you may face higher interest rates or stricter eligibility criteria. Some NBFCs specialized in lending to those with scores below 750.</p>
+          </div>
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">Is a Personal Loan better than a Credit Card loan?</h3>
+            <p className="text-on-surface-variant leading-relaxed">Generally, personal loans have lower interest rates (10-18%) compared to credit card interest (36-48%), making them a better choice for debt consolidation.</p>
+          </div>
+        </div>
+      </section>
       </div>
+    </div>
     </div>
   );
 }

@@ -47,8 +47,13 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-white dark:bg-slate-900 shadow-sm dark:shadow-none">
       <div className="flex items-center justify-between px-4 md:px-8 py-3 md:py-4 max-w-7xl mx-auto gap-2 md:gap-4">
-        <Link to="/" className="text-lg md:text-2xl font-bold tracking-tight text-blue-900 dark:text-blue-100 shrink-0 font-headline leading-none">
-          FinTools <span className="hidden sm:inline">India</span>
+        <Link to="/" className="flex flex-col shrink-0 no-underline">
+          <span className="text-lg md:text-2xl font-bold tracking-tight text-blue-900 dark:text-blue-100 font-headline leading-none">
+            FinTools <span className="hidden sm:inline">India</span>
+          </span>
+          <span className="text-[9px] md:text-[10px] font-bold text-slate-400 dark:text-slate-500 tracking-[0.2em] uppercase mt-0.5 leading-none">
+            by YugoFAI
+          </span>
         </Link>
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">

@@ -1,6 +1,8 @@
 import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import ToolSidebar from "../components/ToolSidebar";
+import SEO from "../components/SEO";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 export default function PPFCalculator() {
   const [annualInvestment, setAnnualInvestment] = useState(150000);
@@ -25,8 +27,44 @@ export default function PPFCalculator() {
 
   return (
     <div className="flex flex-1 max-w-7xl mx-auto w-full relative">
+      <SEO 
+        title="PPF Calculator 2026: Calculate Interest & Maturity Value"
+        description="Estimate your Public Provident Fund (PPF) returns. Plan your long-term 15-year tax-free savings with our accurate PPF interest tool."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How is PPF interest calculated?",
+              "answer": {
+                "@type": "Answer",
+                "text": "PPF interest is calculated monthly on the lowest balance between the 5th and the end of the month, but credited annually on March 31st."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is PPF investment tax-free?",
+              "answer": {
+                "@type": "Answer",
+                "text": "Yes, PPF follows the EEE (Exempt-Exempt-Exempt) model: contributions are tax-deductible, interest is tax-free, and maturity amount is also tax-free."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the maximum limit for PPF?",
+              "answer": {
+                "@type": "Answer",
+                "text": "The maximum investment limit for a Public Provident Fund (PPF) account is ₹1.5 Lakh per financial year."
+              }
+            }
+          ]
+        }}
+      />
       <ToolSidebar />
-      <div className="flex-1 px-6 py-12 md:px-12 min-h-screen w-full">
+      <div className="flex-1 min-h-screen w-full">
+        <Breadcrumbs pageName="PPF Calculator" />
+        <div className="px-6 py-12 md:px-12">
       {/* Hero Header */}
       <header className="mb-12">
         <span className="font-label uppercase tracking-widest text-primary font-bold text-xs">Retirement Planning</span>
@@ -162,7 +200,23 @@ export default function PPFCalculator() {
           </div>
         </div>
       </section>
+
+        {/* FAQ Section */}
+        <section className="mt-24 max-w-4xl mx-auto mb-12">
+          <h2 className="text-3xl font-extrabold text-primary mb-10 text-center">PPF Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+              <h3 className="font-bold text-lg text-primary mb-2">Can I open two PPF accounts?</h3>
+              <p className="text-on-surface-variant leading-relaxed">No, an individual can open only one PPF account in their own name. You can, however, open another account as a guardian for a minor child.</p>
+            </div>
+            <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+              <h3 className="font-bold text-lg text-primary mb-2">What happens if I forget to deposit money in my PPF?</h3>
+              <p className="text-on-surface-variant leading-relaxed">If you don't deposit the minimum ₹500 annually, the account becomes discontinued. You can revive it by paying a ₹50 penalty per year of default plus the minimum deposit.</p>
+            </div>
+          </div>
+        </section>
       </div>
+    </div>
     </div>
   );
 }

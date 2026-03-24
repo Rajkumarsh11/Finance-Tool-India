@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 export default function Disclaimer() {
   return (
     <main className="max-w-7xl mx-auto px-6 py-16 md:py-24">
+      <SEO 
+        title="Financial Disclaimer | FinTools India"
+        description="Indicative calculations only. Please consult a professional advisor for final financial decisions."
+      />
       {/* Hero Section */}
       <header className="mb-16">
         <div className="inline-block px-3 py-1 mb-6 rounded-full bg-surface-container text-primary font-label text-xs font-semibold tracking-wider uppercase">

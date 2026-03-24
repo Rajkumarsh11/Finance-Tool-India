@@ -1,6 +1,8 @@
 import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import ToolSidebar from "../components/ToolSidebar";
+import SEO from "../components/SEO";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 export default function GSTCalculator() {
   const [amount, setAmount] = useState(10000);
@@ -35,8 +37,44 @@ export default function GSTCalculator() {
 
   return (
     <div className="flex flex-1 max-w-7xl mx-auto w-full relative">
+      <SEO 
+        title="GST Calculator India 2026: Online GST Inclusive/Exclusive"
+        description="Fast GST calculator for Indian businesses. Calculate IGST, CGST, and SGST for all tax slabs (5%, 12%, 18%, 28%) instantly. Free & easy to use."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How to calculate GST amount?",
+              "answer": {
+                "@type": "Answer",
+                "text": "For GST Exclusive, multiply Price by GST Rate and divide by 100. For GST Inclusive, use: Price - [Price * (100 / (100 + GST Rate))]."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between IGST and CGST?",
+              "answer": {
+                "@type": "Answer",
+                "text": "CGST is Central GST for sales within the same state. IGST is Integrated GST for sales between different states."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are the common GST slabs in India?",
+              "answer": {
+                "@type": "Answer",
+                "text": "The common GST slabs are 5%, 12%, 18%, and 28%, depending on the type of goods or services provided."
+              }
+            }
+          ]
+        }}
+      />
       <ToolSidebar />
-      <main className="flex-1 p-4 md:p-6 lg:p-10 border-l border-outline-variant/10">
+      <main className="flex-1">
+        <Breadcrumbs pageName="GST Calculator" />
+        <div className="p-4 md:p-6 lg:p-10 border-l border-outline-variant/10">
         <div className="mb-10">
           <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-4 tracking-tight">GST Calculator</h1>
           <p className="text-on-surface-variant text-lg max-w-2xl leading-relaxed">Calculate Goods and Services Tax accurately for your business or personal needs. Fast, precise, and compliant with current Indian tax slabs.</p>
@@ -188,7 +226,23 @@ export default function GSTCalculator() {
             </div>
           </div>
         </div>
-      </main>
+
+        {/* FAQ Section */}
+        <section className="mt-24 max-w-4xl mx-auto mb-12">
+          <h2 className="text-3xl font-extrabold text-primary mb-10 text-center">GST Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20">
+              <h3 className="font-bold text-lg text-primary mb-2">When is IGST applied?</h3>
+              <p className="text-on-surface-variant leading-relaxed">IGST applies to all inter-state supply of goods and services, as well as on imports and exports of goods and services in India.</p>
+            </div>
+            <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20">
+              <h3 className="font-bold text-lg text-primary mb-2">Can I claim Input Tax Credit on all GST?</h3>
+              <p className="text-on-surface-variant leading-relaxed">Generally, yes, if you are a registered GST dealer and the input was used for business purposes. However, certain items like food and beverages or personal vehicle expenses are restricted.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
     </div>
   );
 }

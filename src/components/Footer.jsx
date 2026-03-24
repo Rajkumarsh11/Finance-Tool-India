@@ -6,10 +6,13 @@ export default function Footer() {
     <footer className="w-full border-t-0 mt-12 md:mt-20 bg-white dark:bg-slate-900">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-6 md:px-8 lg:px-12 py-10 md:py-12 max-w-7xl mx-auto">
         <div className="col-span-1 sm:col-span-2 md:col-span-1">
-          <div className="text-lg font-bold text-blue-900 dark:text-blue-100 mb-4">FinTools India</div>
-          <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">
+          <div className="text-lg font-bold text-blue-900 dark:text-blue-100 mb-2">FinTools India</div>
+          <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">
             Precision financial planning for the modern Indian citizen. Empowering your decisions through math and transparency.
           </p>
+          <div className="text-[10px] uppercase tracking-wider text-slate-400 dark:text-slate-500 font-medium mb-6">
+            Powered by YugoFAI
+          </div>
           <div className="flex gap-4">
             <span className="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">public</span>
             <span className="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">share</span>

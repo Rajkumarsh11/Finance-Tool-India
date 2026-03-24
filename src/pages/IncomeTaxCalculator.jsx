@@ -1,6 +1,8 @@
 import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import ToolSidebar from "../components/ToolSidebar";
+import SEO from "../components/SEO";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 export default function IncomeTaxCalculator() {
   const [grossIncome, setGrossIncome] = useState(1200000);
@@ -93,8 +95,44 @@ export default function IncomeTaxCalculator() {
 
   return (
     <div className="flex flex-1 max-w-7xl mx-auto w-full relative">
+      <SEO 
+        title="Income Tax Calculator FY 2025-26: Old vs New Regime"
+        description="Calculate your tax liability for the latest financial year. Compare Old and New Tax Regimes to save more money. Simple & 100% accurate."
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Which is better: Old or New Tax Regime?",
+              "answer": {
+                "@type": "Answer",
+                "text": "The New Regime is better for those who don't have many deductions. The Old Regime is beneficial if you have significant investments under 80C, 80D, and HRA."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the standard deduction for FY 2026-27?",
+              "answer": {
+                "@type": "Answer",
+                "text": "For the financial year 2026-27, the standard deduction has been increased to ₹75,000 for salaried individuals in the New Tax Regime."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Up to what income is tax-free in India?",
+              "answer": {
+                "@type": "Answer",
+                "text": "In the New Regime, income up to ₹12 Lakhs is effectively tax-free due to the Section 87A rebate."
+              }
+            }
+          ]
+        }}
+      />
       <ToolSidebar />
-      <main className="flex-1 p-4 md:p-6 lg:p-10">
+      <main className="flex-1">
+        <Breadcrumbs pageName="Income Tax Calculator" />
+        <div className="p-4 md:p-6 lg:p-10">
       {/* Hero Section */}
       <header className="mb-12">
         <div className="inline-block px-3 py-1 bg-primary-fixed text-on-primary-fixed text-xs font-bold font-label tracking-widest rounded-full mb-4">FINANCIAL YEAR 2026-27</div>
@@ -256,10 +294,25 @@ export default function IncomeTaxCalculator() {
             <span className="material-symbols-outlined text-primary">help_outline</span>
             <div>
               <p className="text-sm font-bold">Confused about HRA?</p>
-              <p className="text-xs text-on-surface-variant">HRA exemption can only be claimed in the Old Regime if you live in a rented accommodation.</p>
             </div>
           </div>
         </aside>
+      </div>
+
+      {/* FAQ Section */}
+      <section className="mt-24 max-w-4xl mx-auto mb-12">
+        <h2 className="text-3xl font-extrabold text-primary mb-10 text-center">Income Tax Frequently Asked Questions</h2>
+        <div className="space-y-6">
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">Is the New Tax Regime mandatory?</h3>
+            <p className="text-on-surface-variant leading-relaxed">No, the New Regime is the 'default' regime, but you can still 'opt-out' and choose the Old Regime if it offers more tax savings for you.</p>
+          </div>
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">Can I switch regimes every year?</h3>
+            <p className="text-on-surface-variant leading-relaxed">Salaried individuals can switch between Old and New regimes every year at the time of filing ITR. Business owners, however, have only one chance to switch back to the Old regime in their lifetime.</p>
+          </div>
+        </div>
+      </section>
       </div>
 
       </main>
