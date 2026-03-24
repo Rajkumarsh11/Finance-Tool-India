@@ -52,7 +52,7 @@ export default function TermInsurance() {
             {
               "@type": "Question",
               "name": "What is the 15x rule in term insurance?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "The 15x rule suggests that your term insurance cover (sum assured) should be at least 15 times your annual income to provide adequate support for your family."
               }
@@ -60,17 +60,25 @@ export default function TermInsurance() {
             {
               "@type": "Question",
               "name": "Is term insurance maturity amount taxable?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Term insurance usually has no maturity benefit. However, the death benefit (claim amount) received by the nominees is 100% tax-free under Section 10(10D)."
               }
             },
             {
               "@type": "Question",
-              "name": "Till what age should I buy term insurance?",
-              "answer": {
+              "name": "Is term insurance better than LIC endowment?",
+              "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "It is generally recommended to have cover until your expected retirement age (usually 60 or 65), by which time your dependents will likely be self-sufficient and your liabilities cleared."
+                "text": "Term insurance is much cheaper and provides higher life cover. Endowment plans combine insurance and investment but often provide inadequate cover and lower returns (5-6%)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I get term insurance without a medical test?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Some insurers offer 'tele-medical' or no-medical plans for lower cover amounts (up to 50L) or younger ages, but a full medical test is usually better for higher cover."
               }
             }
           ]
@@ -238,8 +246,12 @@ export default function TermInsurance() {
             <p className="text-on-surface-variant leading-relaxed">Yes, smokers can buy term insurance, but the premiums are typically 30-70% higher than for non-smokers due to increased health risks.</p>
           </div>
           <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
-            <h3 className="font-bold text-lg text-primary mb-2">What is 'Claim Settlement Ratio' (CSR)?</h3>
-            <p className="text-on-surface-variant leading-relaxed">CSR is the percentage of claims an insurer pays out of the total claims received. We recommend choosing a company with a CSR higher than 98%.</p>
+            <h3 className="font-bold text-lg text-primary mb-2">Is term insurance better than LIC endowment?</h3>
+            <p className="text-on-surface-variant leading-relaxed">Term insurance is much cheaper and provides higher life cover. Endowment plans combine insurance and investment but often provide inadequate cover and lower returns (5-6%).</p>
+          </div>
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">Can I get term insurance without a medical test?</h3>
+            <p className="text-on-surface-variant leading-relaxed">Some insurers offer 'tele-medical' or no-medical plans for lower cover amounts (up to 50L) or younger ages, but a full medical test is usually better for higher cover.</p>
           </div>
         </div>
       </section>

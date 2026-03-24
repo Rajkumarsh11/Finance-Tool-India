@@ -51,7 +51,7 @@ export default function HealthInsurance() {
             {
               "@type": "Question",
               "name": "How much health insurance coverage do I need?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "For a family in a metro city, we recommend a minimum coverage of ₹10 Lakhs. If you have parents, consider ₹15-20 Lakhs due to rising medical inflation."
               }
@@ -59,17 +59,25 @@ export default function HealthInsurance() {
             {
               "@type": "Question",
               "name": "Do health insurance premiums increase with age?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Yes, health insurance premiums are highly sensitive to age as the risk of medical issues increases. Premiums typically jump when you enter a new age bracket (e.g., 36, 41, 46)."
               }
             },
             {
               "@type": "Question",
-              "name": "What is a 'Floater' plan?",
-              "answer": {
+              "name": "Is maternity covered in health insurance?",
+              "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "A Family Floater plan covers the entire family under a single sum insured. Any member can use the total limit during the policy year."
+                "text": "Many modern health plans cover maternity after a waiting period of 2-4 years. Always check the sub-limits for normal and C-section deliveries."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I port my health insurance to another company?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, you can 'port' your policy to another insurer at the time of renewal while retaining 'waiting period' benefits for pre-existing diseases."
               }
             }
           ]
@@ -272,8 +280,12 @@ export default function HealthInsurance() {
             <p className="text-on-surface-variant leading-relaxed">It's the time you must wait before you can claim for pre-existing diseases. Usually, it's 2-4 years, though some plans offer waivers for an extra premium.</p>
           </div>
           <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
-            <h3 className="font-bold text-lg text-primary mb-2">Is dental treatment covered?</h3>
-            <p className="text-on-surface-variant leading-relaxed">Standard health insurance in India usually doesn't cover dental treatment unless it's due to an accident. Some premium plans or add-ons might include OPD dental cover.</p>
+            <h3 className="font-bold text-lg text-primary mb-2">Is maternity covered in health insurance?</h3>
+            <p className="text-on-surface-variant leading-relaxed">Many modern health plans cover maternity after a waiting period of 2-4 years. Always check the sub-limits for normal and C-section deliveries.</p>
+          </div>
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">Can I port my health insurance to another company?</h3>
+            <p className="text-on-surface-variant leading-relaxed">Yes, you can 'port' your policy to another insurer at the time of renewal while retaining 'waiting period' benefits for pre-existing diseases.</p>
           </div>
         </div>
       </section>

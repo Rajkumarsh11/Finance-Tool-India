@@ -15,7 +15,7 @@ export default function Home() {
             {
               "@type": "Question",
               "name": "Are FinTools India calculators accurate?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Yes, our calculators are built using standardized Indian financial regulations (RBI, Income Tax Dept) and are updated for the 2026-27 fiscal year to ensure 100% accuracy."
               }
@@ -23,7 +23,7 @@ export default function Home() {
             {
               "@type": "Question",
               "name": "Is my data safe on FinTools India?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Absolutely. We use a 'Zero-Storage' architecture, meaning all calculations happen locally in your browser. No personal financial data is ever sent to or stored on our servers."
               }
@@ -31,9 +31,17 @@ export default function Home() {
             {
               "@type": "Question",
               "name": "Is it free to use FinTools India?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Yes, all our financial tools and calculators are 100% free to use for all users, with no hidden costs or subscriptions."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How often are the calculators updated?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We update our tools as soon as new policies are announced by the RBI or the Ministry of Finance, such as the new tax slabs for FY 2026-27."
               }
             }
           ]
@@ -296,6 +304,10 @@ export default function Home() {
             <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
               <h3 className="font-bold text-lg text-primary mb-2">Can I use these tools on my phone?</h3>
               <p className="text-on-surface-variant leading-relaxed">Yes, FinTools India is designed with a mobile-first approach, ensuring a seamless experience across smartphones, tablets, and desktops.</p>
+            </div>
+            <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+              <h3 className="font-bold text-lg text-primary mb-2">How often are the calculators updated?</h3>
+              <p className="text-on-surface-variant leading-relaxed">We update our tools as soon as new policies are announced by the RBI or the Ministry of Finance, such as the new tax slabs for FY 2026-27.</p>
             </div>
           </div>
         </div>

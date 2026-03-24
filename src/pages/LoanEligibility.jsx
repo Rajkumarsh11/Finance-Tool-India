@@ -46,7 +46,7 @@ export default function LoanEligibility() {
             {
               "@type": "Question",
               "name": "How is loan eligibility calculated?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Loan eligibility is primarily calculated using your monthly income and current EMIs. Banks usually cap your total EMI (existing + new) at 50-60% of your net monthly income."
               }
@@ -54,17 +54,25 @@ export default function LoanEligibility() {
             {
               "@type": "Question",
               "name": "What is FOIR in loan eligibility?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "FOIR stands for Fixed Obligation to Income Ratio. it is a parameter used by banks to determine if a borrower can afford a new loan after paying existing debts."
               }
             },
             {
               "@type": "Question",
-              "name": "Can I increase my loan eligibility?",
-              "answer": {
+              "name": "How much home loan can I get on a ₹1 Lakh salary?",
+              "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, you can increase eligibility by adding a co-applicant (spouse/parent), clearing existing small debts, or opting for a longer tenure."
+                "text": "On a ₹1 Lakh monthly salary, with no other EMIs, you can typically get a home loan of ₹55-65 Lakhs for a 20-year tenure at current interest rates."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I get a loan with a 650 credit score?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A 650 score is considered 'Fair'. While you may get a loan, the interest rates will be higher and you might need a co-applicant with a better score to increase eligibility."
               }
             }
           ]
@@ -300,8 +308,12 @@ export default function LoanEligibility() {
             <p className="text-on-surface-variant leading-relaxed">Assuming no other EMIs and a 20-year tenure at 8.5% interest, you might be eligible for a loan of approximately ₹25-30 Lakhs.</p>
           </div>
           <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
-            <h3 className="font-bold text-lg text-primary mb-2">Does a credit score affect loan amount?</h3>
-            <p className="text-on-surface-variant leading-relaxed">Directly, no, but a high credit score (750+) helps you secure lower interest rates, which indirectly increases the maximum loan amount you can afford.</p>
+            <h3 className="font-bold text-lg text-primary mb-2">How much home loan can I get on a ₹1 Lakh salary?</h3>
+            <p className="text-on-surface-variant leading-relaxed">On a ₹1 Lakh monthly salary, with no other EMIs, you can typically get a home loan of ₹55-65 Lakhs for a 20-year tenure at current interest rates.</p>
+          </div>
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">Can I get a loan with a 650 credit score?</h3>
+            <p className="text-on-surface-variant leading-relaxed">A 650 score is considered 'Fair'. While you may get a loan, the interest rates will be higher and you might need a co-applicant with a better score to increase eligibility.</p>
           </div>
         </div>
       </section>

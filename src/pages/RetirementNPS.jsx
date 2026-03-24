@@ -44,7 +44,7 @@ export default function RetirementNPS() {
             {
               "@type": "Question",
               "name": "What is the benefit of NPS?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "NPS offers low-cost professional management, choice of asset allocation (Equity/Debt), and extra tax benefit of ₹50,000 under Section 80CCD(1B)."
               }
@@ -52,7 +52,7 @@ export default function RetirementNPS() {
             {
               "@type": "Question",
               "name": "Is NPS maturity fully tax-free?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "60% of the NPS corpus withdrawn at maturity is tax-free. The remaining 40% must be used to buy an annuity, which is taxable as per your income slab."
               }
@@ -60,9 +60,17 @@ export default function RetirementNPS() {
             {
               "@type": "Question",
               "name": "How much pension will I get from NPS?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Your pension depends on your total accumulated corpus and the annuity rate at retirement. Typically, 40% of the corpus must be used to provide a monthly pension."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Should I choose NPS or EPF for retirement?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "NPS allows higher equity exposure and extra tax benefits, while EPF offers a guaranteed interest rate. For long-term wealth, a mix of both is recommended."
               }
             }
           ]
@@ -227,6 +235,10 @@ export default function RetirementNPS() {
           <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
             <h3 className="font-bold text-lg text-primary mb-2">Which is better: Auto Choice or Active Choice?</h3>
             <p className="text-on-surface-variant leading-relaxed">Active choice gives you control over equity exposure (up to 75%), while Auto choice automatically reduces equity as you age. Active choice is better for financially savvy investors.</p>
+          </div>
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">Should I choose NPS or EPF for retirement?</h3>
+            <p className="text-on-surface-variant leading-relaxed">NPS allows higher equity exposure and extra tax benefits, while EPF offers a guaranteed interest rate. For long-term wealth, a mix of both is recommended.</p>
           </div>
         </div>
       </section>

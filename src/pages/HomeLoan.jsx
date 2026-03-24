@@ -68,26 +68,34 @@ export default function HomeLoan() {
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "How much home loan can I get?",
-              "answer": {
+              "name": "How much home loan can I get on my salary?",
+              "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Typically, banks lend up to 80-90% of the property value, provided your total EMIs don't exceed 50-60% of your monthly take-home income."
+                "text": "Typically, banks lend up to 60 times your net monthly salary, provided your total EMIs don't exceed 50% of your take-home pay."
               }
             },
             {
               "@type": "Question",
-              "name": "What is the maximum tenure for a home loan?",
-              "answer": {
+              "name": "Is it better to choose fixed or floating interest?",
+              "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Most Indian banks offer home loans for a maximum tenure of 30 years, depending on the borrower's age at maturity."
+                "text": "Floating rates are usually better in the long run as they follow market trends. Fixed rates are safer if you expect interest rates to rise significantly soon."
               }
             },
             {
               "@type": "Question",
-              "name": "Does home loan save tax?",
-              "answer": {
+              "name": "Does prepayment reduce home loan tenure?",
+              "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, you can claim deductions on principal under Section 80C and interest under Section 24(b) of the Income Tax Act."
+                "text": "Yes, any extra payment towards the principal reduces the outstanding balance, which either reduces your EMI or, more commonly, your loan tenure."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the current home loan interest rate in India 2026?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "As of early 2026, home loan rates in India vary between 8.35% to 9.50% depending on your credit score and the bench-marking of the bank."
               }
             }
           ]
@@ -238,9 +246,13 @@ export default function HomeLoan() {
             <h2 className="text-3xl font-extrabold text-primary mb-10 text-center">Home Loan Frequently Asked Questions</h2>
             <div className="space-y-6">
               <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
-                <h3 className="font-bold text-lg text-primary mb-2">What is a good credit score for a home loan?</h3>
-                <p className="text-on-surface-variant leading-relaxed">A credit score of 750 or above is considered ideal for a home loan and can help you secure the lowest possible interest rates.</p>
-              </div>
+            <h3 className="font-bold text-lg text-primary mb-2">Can I get tax benefits on a home loan?</h3>
+            <p className="text-on-surface-variant leading-relaxed">Yes, you can claim up to ₹1.5 Lakh on principal (Sec 80C) and up to ₹2 Lakh on interest (Sec 24b) in the Old Tax Regime.</p>
+          </div>
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">What is the current home loan interest rate in India 2026?</h3>
+            <p className="text-on-surface-variant leading-relaxed">As of early 2026, home loan rates in India vary between 8.35% to 9.50% depending on your credit score and the bench-marking of the bank.</p>
+          </div>
               <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
                 <h3 className="font-bold text-lg text-primary mb-2">Fixed vs Floating interest rate: Which is better?</h3>
                 <p className="text-on-surface-variant leading-relaxed">Floating rates are usually lower and benefit from RBI rate cuts. Fixed rates provide certainty but are higher. In the current Indian market, floating rates are more popular.</p>

@@ -37,7 +37,7 @@ export default function PPFCalculator() {
             {
               "@type": "Question",
               "name": "How is PPF interest calculated?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "PPF interest is calculated monthly on the lowest balance between the 5th and the end of the month, but credited annually on March 31st."
               }
@@ -45,7 +45,7 @@ export default function PPFCalculator() {
             {
               "@type": "Question",
               "name": "Is PPF investment tax-free?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Yes, PPF follows the EEE (Exempt-Exempt-Exempt) model: contributions are tax-deductible, interest is tax-free, and maturity amount is also tax-free."
               }
@@ -53,9 +53,17 @@ export default function PPFCalculator() {
             {
               "@type": "Question",
               "name": "What is the maximum limit for PPF?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "The maximum investment limit for a Public Provident Fund (PPF) account is ₹1.5 Lakh per financial year."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I extend PPF after 15 years?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, you can extend your PPF account indefinitely in blocks of 5 years. You can choose to extend either with fresh contributions or without them."
               }
             }
           ]
@@ -212,6 +220,10 @@ export default function PPFCalculator() {
             <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
               <h3 className="font-bold text-lg text-primary mb-2">What happens if I forget to deposit money in my PPF?</h3>
               <p className="text-on-surface-variant leading-relaxed">If you don't deposit the minimum ₹500 annually, the account becomes discontinued. You can revive it by paying a ₹50 penalty per year of default plus the minimum deposit.</p>
+            </div>
+            <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+              <h3 className="font-bold text-lg text-primary mb-2">Can I extend PPF after 15 years?</h3>
+              <p className="text-on-surface-variant leading-relaxed">Yes, you can extend your PPF account indefinitely in blocks of 5 years. You can choose to extend either with fresh contributions or without them.</p>
             </div>
           </div>
         </section>

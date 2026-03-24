@@ -105,7 +105,7 @@ export default function IncomeTaxCalculator() {
             {
               "@type": "Question",
               "name": "Which is better: Old or New Tax Regime?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "The New Regime is better for those who don't have many deductions. The Old Regime is beneficial if you have significant investments under 80C, 80D, and HRA."
               }
@@ -113,7 +113,7 @@ export default function IncomeTaxCalculator() {
             {
               "@type": "Question",
               "name": "What is the standard deduction for FY 2026-27?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "For the financial year 2026-27, the standard deduction has been increased to ₹75,000 for salaried individuals in the New Tax Regime."
               }
@@ -121,9 +121,17 @@ export default function IncomeTaxCalculator() {
             {
               "@type": "Question",
               "name": "Up to what income is tax-free in India?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "In the New Regime, income up to ₹12 Lakhs is effectively tax-free due to the Section 87A rebate."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I claim 80C in the New Tax Regime?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, most deductions like 80C, 80D, and HRA are not allowed in the New Tax Regime. It offers lower tax rates instead of deductions."
               }
             }
           ]
@@ -310,6 +318,10 @@ export default function IncomeTaxCalculator() {
           <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
             <h3 className="font-bold text-lg text-primary mb-2">Can I switch regimes every year?</h3>
             <p className="text-on-surface-variant leading-relaxed">Salaried individuals can switch between Old and New regimes every year at the time of filing ITR. Business owners, however, have only one chance to switch back to the Old regime in their lifetime.</p>
+          </div>
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">Can I claim 80C in the New Tax Regime?</h3>
+            <p className="text-on-surface-variant leading-relaxed">No, most deductions like 80C, 80D, and HRA are not allowed in the New Tax Regime. It offers lower tax rates instead of deductions.</p>
           </div>
         </div>
       </section>

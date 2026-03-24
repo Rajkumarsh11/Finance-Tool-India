@@ -55,7 +55,7 @@ export default function FDCalculator() {
             {
               "@type": "Question",
               "name": "How is FD maturity calculated?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "FD maturity is calculated using the compound interest formula: A = P(1 + r/n)^(nt), where P is principal, r is rate, n is compounding frequency, and t is time."
               }
@@ -63,7 +63,7 @@ export default function FDCalculator() {
             {
               "@type": "Question",
               "name": "Which compounding frequency is best for FD?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Monthly or quarterly compounding results in slightly higher maturity values compared to half-yearly or yearly compounding due to more frequent interest accumulation."
               }
@@ -71,9 +71,17 @@ export default function FDCalculator() {
             {
               "@type": "Question",
               "name": "Is FD interest taxable?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Yes, FD interest is added to your total income and taxed as per your slab. TDS is deducted if interest exceeds ₹40,000 (₹50,000 for seniors)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is senior citizen FD rate better than regular FD?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, most Indian banks offer an additional 0.50% interest rate to senior citizens (above 60 years) compared to regular depositors."
               }
             }
           ]
@@ -254,6 +262,10 @@ export default function FDCalculator() {
           <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
             <h3 className="font-bold text-lg text-primary mb-2">What is a 5-year Tax Saving FD?</h3>
             <p className="text-on-surface-variant leading-relaxed">It's a special FD with a mandatory 5-year lock-in that qualifies for deduction under Section 80C. However, the interest earned is still taxable.</p>
+          </div>
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">Is senior citizen FD rate better than regular FD?</h3>
+            <p className="text-on-surface-variant leading-relaxed">Yes, most Indian banks offer an additional 0.50% interest rate to senior citizens (above 60 years) compared to regular depositors.</p>
           </div>
         </div>
       </section>

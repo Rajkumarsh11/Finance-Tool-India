@@ -55,7 +55,7 @@ export default function SIPCalculator() {
             {
               "@type": "Question",
               "name": "How is SIP return calculated?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "SIP returns are calculated using the FV (Future Value) formula, which considers the periodic investment, rate of return, and time period, compounded monthly."
               }
@@ -63,7 +63,7 @@ export default function SIPCalculator() {
             {
               "@type": "Question",
               "name": "What is the average return on SIP in India?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Historical data shows that equity mutual funds in India typically deliver annual returns between 12% to 15% over a long tenure (10+ years)."
               }
@@ -71,9 +71,17 @@ export default function SIPCalculator() {
             {
               "@type": "Question",
               "name": "Can I stop my SIP anytime?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Yes, mutual fund SIPs are highly flexible. You can stop, pause, or change the investment amount at any time without any penalty from the fund house."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is SIP better than Lumpsum in a bull market?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SIP is generally safer due to Rupee Cost Averaging. If the market is rising, lumpsum might yield more, but SIP protects you if the market corrects after your investment."
               }
             }
           ]
@@ -272,6 +280,10 @@ export default function SIPCalculator() {
               <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20">
                 <h3 className="font-bold text-lg text-primary mb-2">How much should I invest in SIP?</h3>
                 <p className="text-on-surface-variant leading-relaxed">A common rule of thumb is to save at least 20% of your take-home pay, with a significant portion going into SIPs aligned with your long-term goals.</p>
+              </div>
+              <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20">
+                <h3 className="font-bold text-lg text-primary mb-2">Is SIP better than Lumpsum in a bull market?</h3>
+                <p className="text-on-surface-variant leading-relaxed">SIP is generally safer due to Rupee Cost Averaging. If the market is rising, lumpsum might yield more, but SIP protects you if the market corrects after your investment.</p>
               </div>
             </div>
           </section>

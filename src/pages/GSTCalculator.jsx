@@ -46,26 +46,34 @@ export default function GSTCalculator() {
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "How to calculate GST amount?",
-              "answer": {
+              "name": "How to calculate GST online?",
+              "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "For GST Exclusive, multiply Price by GST Rate and divide by 100. For GST Inclusive, use: Price - [Price * (100 / (100 + GST Rate))]."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What is the difference between IGST and CGST?",
-              "answer": {
-                "@type": "Answer",
-                "text": "CGST is Central GST for sales within the same state. IGST is Integrated GST for sales between different states."
+                "text": "To calculate GST, multiply the base amount by the GST rate (e.g., 18/100). For inclusive amounts, use [Amount - (Amount * (100 / (100 + GST rate)))]"
               }
             },
             {
               "@type": "Question",
               "name": "What are the common GST slabs in India?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The common GST slabs are 5%, 12%, 18%, and 28%, depending on the type of goods or services provided."
+                "text": "The primary GST slabs in India are 5%, 12%, 18%, and 28%. Some essential items are taxed at 0%, while luxury items may have an additional cess."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is this GST calculator accurate for FY 2026?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, our tool is updated with the latest GST council regulations and is 100% accurate for businesses and individuals for the current financial year."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between CGST, SGST, and IGST?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "CGST & SGST are charged on intra-state sales (within the same state), split equally between Central and State governments. IGST is charged on inter-state sales (between two states)."
               }
             }
           ]
@@ -231,9 +239,13 @@ export default function GSTCalculator() {
         <section className="mt-24 max-w-4xl mx-auto mb-12">
           <h2 className="text-3xl font-extrabold text-primary mb-10 text-center">GST Frequently Asked Questions</h2>
           <div className="space-y-6">
-            <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20">
-              <h3 className="font-bold text-lg text-primary mb-2">When is IGST applied?</h3>
-              <p className="text-on-surface-variant leading-relaxed">IGST applies to all inter-state supply of goods and services, as well as on imports and exports of goods and services in India.</p>
+            <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+              <h3 className="font-bold text-lg text-primary mb-2">Can I calculate GST inclusive and exclusive?</h3>
+              <p className="text-on-surface-variant leading-relaxed">Yes, our tool allows you to input the amount and select whether it is GST inclusive or exclusive to get the net and tax split values.</p>
+            </div>
+            <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+              <h3 className="font-bold text-lg text-primary mb-2">What is the difference between CGST, SGST, and IGST?</h3>
+              <p className="text-on-surface-variant leading-relaxed">CGST & SGST are charged on intra-state sales (within the same state), split equally between Central and State governments. IGST is charged on inter-state sales (between two states).</p>
             </div>
             <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20">
               <h3 className="font-bold text-lg text-primary mb-2">Can I claim Input Tax Credit on all GST?</h3>

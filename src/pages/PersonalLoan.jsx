@@ -92,7 +92,7 @@ export default function PersonalLoan() {
             {
               "@type": "Question",
               "name": "What is the formula for Personal Loan EMI?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "The formula is: [P x R x (1+R)^N]/[(1+R)^N-1]. P is for principal, R is for monthly interest rate, and N is for tenure in months."
               }
@@ -100,17 +100,25 @@ export default function PersonalLoan() {
             {
               "@type": "Question",
               "name": "What is the minimum salary for a personal loan?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Most banks in India require a minimum monthly net income of ₹15,000 to ₹25,000, depending on the city and the lender."
               }
             },
             {
               "@type": "Question",
-              "name": "How long does personal loan approval take?",
-              "answer": {
+              "name": "Can I prepay my Personal Loan without penalty?",
+              "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Instant personal loans can be approved in minutes, while traditional bank processes may take 2-5 working days for documentation and verification."
+                "text": "Many banks allow prepayment after 6-12 months, but some may charge a 2-4% fee on the outstanding principal. Always check the 'Foreclosure' terms."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is a Personal Loan better than a Credit Card loan?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Generally, personal loans have lower interest rates (10-18%) compared to credit card interest (36-48%), making them a better choice for debt consolidation."
               }
             }
           ]
@@ -315,6 +323,10 @@ export default function PersonalLoan() {
           <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
             <h3 className="font-bold text-lg text-primary mb-2">Can I get a personal loan with a low credit score?</h3>
             <p className="text-on-surface-variant leading-relaxed">It's possible, but you may face higher interest rates or stricter eligibility criteria. Some NBFCs specialized in lending to those with scores below 750.</p>
+          </div>
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">Can I prepay my Personal Loan without penalty?</h3>
+            <p className="text-on-surface-variant leading-relaxed">Many banks allow prepayment after 6-12 months, but some may charge a 2-4% fee on the outstanding principal. Always check the 'Foreclosure' terms.</p>
           </div>
           <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
             <h3 className="font-bold text-lg text-primary mb-2">Is a Personal Loan better than a Credit Card loan?</h3>

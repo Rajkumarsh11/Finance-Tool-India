@@ -69,26 +69,34 @@ export default function CarLoan() {
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "How is car loan EMI calculated?",
-              "answer": {
+              "name": "How is car loan interest calculated?",
+              "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Car loan EMI is calculated using the formula: [P x R x (1+R)^N]/[(1+R)^N-1], where P is Principal, R is monthly interest rate, and N is tenure in months."
+                "text": "Most banks in India use the 'Reducing Balance Method' for car loans, where interest is calculated on the outstanding principal at the end of each month."
               }
             },
             {
               "@type": "Question",
-              "name": "What are the current car loan interest rates in India?",
-              "answer": {
+              "name": "What is the best tenure for a car loan?",
+              "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "As of early 2026, car loan interest rates typically range from 8.5% to 12%, depending on the bank and your credit score."
+                "text": "The ideal tenure is 3 to 5 years. While 7 years reduces EMI, you end up paying significantly more in interest as cars are depreciating assets."
               }
             },
             {
               "@type": "Question",
               "name": "Can I prepay my car loan?",
-              "answer": {
+              "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, most banks allow prepayment of car loans, though some may charge a small penalty if paid before a certain period (e.g., 6-12 months)."
+                "text": "Yes, but some banks charge a foreclosure fee (typically 2-5%). It's advisable to check your loan agreement for prepayment penalties."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is it better to take a car loan or pay cash?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "If you can get a loan at a low interest rate (8-9%) and invest your cash for higher returns (12%+), a loan is better. Otherwise, paying cash saves you from interest costs."
               }
             }
           ]
@@ -260,6 +268,14 @@ export default function CarLoan() {
                 <h3 className="font-bold text-lg text-primary mb-2">New vs Used Car Loan: Which is better?</h3>
                 <p className="text-on-surface-variant leading-relaxed">New car loans usually have lower interest rates and longer tenures. Used car loans are easier for smaller budgets but often carry higher interest rates (usually 2-4% higher).</p>
               </div>
+              <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">Can I get a 100% car loan?</h3>
+            <p className="text-on-surface-variant leading-relaxed">Some banks offer 100% on-road financing for select models or corporate employees, but most require a 10-20% down payment.</p>
+          </div>
+          <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
+            <h3 className="font-bold text-lg text-primary mb-2">Is it better to take a car loan or pay cash?</h3>
+            <p className="text-on-surface-variant leading-relaxed">If you can get a loan at a low interest rate (8-9%) and invest your cash for higher returns (12%+), a loan is better. Otherwise, paying cash saves you from interest costs.</p>
+          </div>
               <div className="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/20 shadow-sm">
                 <h3 className="font-bold text-lg text-primary mb-2">How much downpayment should I make?</h3>
                 <p className="text-on-surface-variant leading-relaxed">We recommend making at least 20% downpayment. This reduces your EMI and helps you avoid 'upside-down' loans where you owe more than the car's resale value.</p>
